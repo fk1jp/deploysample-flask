@@ -43,21 +43,21 @@ FLASK_APP=run.py flask run --port 3000 --host '0.0.0.0'
 
 ## 動機
 
-AWSとかの(ECSの)CIやCDをしてみたい！
-ただ、物を作るだけじゃなくてアプリケーション層まで動作確認したい。
-インフラエンジニャーだからアプリは苦手。だからとりあえずで動くやつ欲しい。
+AWSとかの(ECSの)CIやCDをしてみたい！  
+ただ、物を作るだけじゃなくてアプリケーション層まで動作確認したい。  
+インフラエンジニャーだからアプリは苦手。だからとりあえずで動くやつ欲しい。  
 
 ## 参考資料
 
-Flask + SQLAlchemy + SQLAlchemy migrate 周りを参考にしました。
+Flask + SQLAlchemy + SQLAlchemy migrate 周りを参考にしました。  
 https://qiita.com/shirakiya/items/0114d51e9c189658002e
 
-templateやview周りを参考にしました。
+templateやview周りを参考にしました。  
 https://study-flask.readthedocs.io/ja/latest/02.html
 
-postがうまくできなかった -> secret_keyが設定できていなかった。
+postがうまくできなかった -> secret_keyが設定できていなかった。  
 https://ja.stackoverflow.com/questions/46766/runtimeerror-the-session-is-unavailable-because-no-secret-key-was-set
 
-絵文字が入力できなかった
-mysqlコンテナ側修正 https://qiita.com/neko-neko/items/de8ea13bbad32140de87
-flask側修正 https://blog.amedama.jp/entry/2016/06/07/234106
+絵文字が入力できなかった  
+mysqlコンテナ側修正  https://qiita.com/neko-neko/items/de8ea13bbad32140de87  
+flask側修正  https://blog.amedama.jp/entry/2016/06/07/234106  
