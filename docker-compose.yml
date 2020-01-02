@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7.27
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: test1
+      MYSQL_PASSWORD: test2
+      MYSQL_DATABASE: test3
+  app:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    image: flask_base
+    volumes:
+      - ./app:/app
+    working_dir: /app
+    links:
+      - mysql:mysql
+    ports:
+      - 3000:3000
+    environment:
+      MYSQL_USER: 'test1'
+      MYSQL_PASS: 'test2'
+      MYSQL_HOST: 'mysql'
+      MYSQL_DATABASE: 'test3'
+    command: /bin/sh
+    tty: true
